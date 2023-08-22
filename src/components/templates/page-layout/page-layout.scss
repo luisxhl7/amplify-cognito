@@ -1,0 +1,53 @@
+@import '../../../style/mixins.scss';
+@import '../../../style/variables.scss';
+
+.page-layout{
+    &__nav-menu{
+        padding: 20px 10px;
+        width: 100%;
+        display: flex;
+        background-color: #844eda;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        color: #ffffff;
+        position: relative;
+        &__user{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            cursor: pointer;
+            max-width: 100px;
+            overflow: hidden;
+            @include FromMin($x-large) {
+                align-items: center;
+                max-width: 100%;
+            }
+        }
+        &__menu-float{
+            position: absolute;
+            top: 60px;
+            right: 10px;
+            height: 100px;
+            width: 195px;
+            border-radius: 7px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.65);
+            padding: 12px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transform: translateY(25px);
+            transition: transform .2s ease-out;
+            display: none;
+            &.--open{
+                display: flex;
+            }
+        }
+        &__button{
+            cursor: pointer;
+            border: none;
+            background-color: transparent;
+        }
+    }
+}

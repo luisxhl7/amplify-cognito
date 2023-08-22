@@ -1,0 +1,55 @@
+.content-form{
+    width: 100%;
+    &__form{
+        width: 300px;
+        display: flex;
+        margin: 0px auto 0px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    &__input{
+        margin: 10px 0px 0px;
+        padding: 5px 15px;
+        width: 100%;
+        max-width: 250px;
+        outline: none;
+        border-radius: 15px;
+        border: 1px solid;
+    }
+    &__button{
+        background-color: #844eda;
+        color: #ffffff;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        width: 100%;
+        padding: 7px;
+        margin-top: 20px;
+        max-width: 130px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+    }
+    & h2{
+        text-align: center;
+        margin: 20px auto 0px;
+    }
+    & .error-message{
+        color: #ff0000;
+        font-size: 11px;
+    }
+    /* Estilo para ocultar las flechas de incremento y decremento en los campos de entrada de tipo "number" */
+    & input[type="number"]::-webkit-inner-spin-button,
+    & input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+
+    /* También puedes agregar el siguiente estilo para navegadores Firefox */
+    & input[type="number"] {
+        -moz-appearance: textfield;
+    }
+}
